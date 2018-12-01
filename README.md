@@ -8,7 +8,7 @@ This Plugin will restart the debugger whenever the above message appears.
 
 This is not really a fix/patch, but a workaround because I cannot access/edit the sources for the Plugin.
 
-This bug was moved to the status "Obsolete". But it is still reproduciblein version:
+This bug was moved to the status "Obsolete". But it is still reproducible in version:
 
     IntelliJ IDEA 2018.3 (Ultimate Edition)
     Build #IU-183.4284.148, built on November 21, 2018
