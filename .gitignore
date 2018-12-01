@@ -1,0 +1,7 @@
+LiveEdit_sources
+.idea
+*.iml
+out
+gradle.properties
+build
+.gradle

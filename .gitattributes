@@ -1,0 +1,4 @@
+## This file tells git how to handle line endings on checkout
+# more info here: https://help.github.com/articles/dealing-with-line-endings/
+# default setting for all files
+* text=lf
