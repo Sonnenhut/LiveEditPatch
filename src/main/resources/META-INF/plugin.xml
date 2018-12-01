@@ -2,9 +2,15 @@
   <id>sonnenhut.liveedit.patch</id>
   <name>LiveEdit patch for JavaScript modules support</name>
   <vendor email="" url="https://github.com/Sonnenhut">Sonnenhut</vendor>
+  <!-- dependencies from LiveEdit -->
   <depends>LiveEdit</depends>
+  <depends>JavaScript</depends>
+  <depends>JavaScriptDebugger</depends>
+  <depends>com.intellij.modules.xml</depends>
+  <depends>com.intellij.css</depends>
+  <!-- END dependencies from LiveEdit -->
   <idea-version since-build="183.4284"/>
-  <version>1.3</version>
+  <version>1.4</version>
 
   <description><![CDATA[
 <p><strong>IntelliJ plugin to &quot;patch&quot; <a href="https://youtrack.jetbrains.net/issue/WEB-30653">WEB-30653</a></strong></p>
