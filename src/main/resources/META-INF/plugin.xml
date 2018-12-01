@@ -7,7 +7,7 @@
   <description><![CDATA[
 <p><strong>IntelliJ plugin to &quot;patch&quot; <a href="https://youtrack.jetbrains.net/issue/WEB-30653">WEB-30653</a></strong></p>
 <p>IntelliJ throws a warning when editing JavaScript modules: &quot;Editing module's script is not supported&quot;</p>
-<p>As per documentation LiveEdit should at least rerun the debugger, but it does not.</p>
+<p>As per documentation <a href="https://plugins.jetbrains.com/plugin/7007-liveedit">LiveEdit</a> should at least rerun the debugger, but it does not.</p>
 <p>This Plugin will restart the debugger whenever the above message appears.</p>
 <p>This is not really a fix/patch, but a workaround because I cannot access/edit the sources for the Plugin.</p>
 <p>This bug was moved to the status &quot;Obsolete&quot;. But it is still reproducible in version:</p>
