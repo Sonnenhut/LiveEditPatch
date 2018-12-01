@@ -1,8 +1,10 @@
 <idea-plugin>
   <id>sonnenhut.liveedit.patch</id>
   <name>LiveEdit patch for JavaScript modules support</name>
-  <version>1.2</version>
   <vendor email="" url="https://github.com/Sonnenhut">Sonnenhut</vendor>
+  <depends>LiveEdit</depends>
+  <idea-version since-build="183.4284"/>
+  <version>1.3</version>
 
   <description><![CDATA[
 <p><strong>IntelliJ plugin to &quot;patch&quot; <a href="https://youtrack.jetbrains.net/issue/WEB-30653">WEB-30653</a></strong></p>
@@ -19,9 +21,6 @@ JRE: 1.8.0_152-release-1343-b15 amd64
 JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
 Windows 10 10.0</code></pre>
     ]]></description>
-
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="183.4284"/>
 
   <project-components>
     <component>
