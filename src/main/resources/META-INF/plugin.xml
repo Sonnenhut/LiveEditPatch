@@ -38,7 +38,7 @@ Windows 10 10.0</code></pre>
   </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+  <idea-version since-build="183.4284"/>
 
   <project-components>
     <component>
