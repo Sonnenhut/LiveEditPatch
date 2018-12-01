@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>sonnenhut.liveedit.patch</id>
   <name>LiveEdit patch for JavaScript modules support</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="" url="https://github.com/Sonnenhut">Sonnenhut</vendor>
 
   <description><![CDATA[
