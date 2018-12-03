@@ -3,7 +3,7 @@
   <name>LiveEdit patch for JavaScript modules support</name>
   <vendor email="" url="https://github.com/Sonnenhut">Sonnenhut</vendor>
   <!-- dependencies from LiveEdit -->
-  <depends>LiveEdit</depends>
+  <depends>com.intellij.plugins.html.instantEditing</depends>
   <depends>JavaScript</depends>
   <depends>JavaScriptDebugger</depends>
   <depends>com.intellij.modules.xml</depends>
