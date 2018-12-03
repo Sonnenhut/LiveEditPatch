@@ -22,6 +22,7 @@ public class LiveEditPatchComponent implements ProjectComponent {
     private static String LIVEEDIT_WEB_30653_PATCH_MSG = "LiveEdit patch: Debugger restarted";
 
     private Project project;
+    private boolean showInfoMessage = true;
 
     public LiveEditPatchComponent(Project p) {
         this.project = p;
@@ -40,19 +41,20 @@ public class LiveEditPatchComponent implements ProjectComponent {
     }
 
     private void restartDebugger() {
-        AnAction action = ActionManager.getInstance().getAction("Rerun");
+        final AnAction action = ActionManager.getInstance().getAction("Rerun");
         if(action != null) {
-            MouseEvent me = new MouseEvent(JOptionPane.getRootFrame(), MouseEvent.MOUSE_CLICKED, System.currentTimeMillis(), 0, 0, 0, 0, false, 1);
+            final MouseEvent me = new MouseEvent(JOptionPane.getRootFrame(), MouseEvent.MOUSE_CLICKED, System.currentTimeMillis(), 0, 0, 0, 0, false, 1);
             ActionManagerEx.getInstance().tryToExecute(action, me, null, null, false);
-            infoWorkaroundExecuted();
+            notifyWorkaroundExecuted();
         }
     }
 
-    private void infoWorkaroundExecuted() {
-        NotificationGroup toolWindowGroup = NotificationGroup.findRegisteredGroup(LIVEEDIT_ID);
-        if(toolWindowGroup != null) {
+    private void notifyWorkaroundExecuted() {
+        final NotificationGroup toolWindowGroup = NotificationGroup.findRegisteredGroup(LIVEEDIT_ID);
+        if(toolWindowGroup != null && showInfoMessage) {
             Notification notification = toolWindowGroup.createNotification("", LIVEEDIT_WEB_30653_PATCH_MSG, NotificationType.INFORMATION, null);
             notification.notify(project);
+            showInfoMessage = false; // only show it once per session
         }
     }
 
@@ -70,8 +72,8 @@ public class LiveEditPatchComponent implements ProjectComponent {
         public void notify(@NotNull Notification notification) {
             if(LIVEEDIT_ID.equals(notification.getGroupId())
                     && notification.getContent().contains(LIVEEDIT_WEB_30653_MSG)) {
-                callback.get();
                 notification.expire();
+                callback.get();
             }
         }
 
@@ -100,7 +102,7 @@ public class LiveEditPatchComponent implements ProjectComponent {
         notification.notify(project);
     }
 
-    class MyActionListener implements AnActionListener {
+    static class MyActionListener implements AnActionListener {
         @Override
         public void beforeActionPerformed(@NotNull AnAction action, @NotNull DataContext dataContext, AnActionEvent event) {
             final String text = action.toString() + " " + event.getPlace() + " " + event.getDataContext();
