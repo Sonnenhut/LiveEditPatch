@@ -10,7 +10,7 @@
   <depends>com.intellij.css</depends>
   <!-- END dependencies from LiveEdit -->
   <idea-version since-build="183.4284"/>
-  <version>1.4</version>
+  <version>1.5</version>
 
   <description><![CDATA[
 <p><strong>IntelliJ plugin to &quot;patch&quot; <a href="https://youtrack.jetbrains.net/issue/WEB-30653">WEB-30653</a></strong></p>
